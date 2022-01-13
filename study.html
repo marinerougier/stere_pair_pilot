@@ -1244,7 +1244,7 @@ var rating_dominance_1 = {
 
 
   /* TIMELINES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-  //timeline.push(consent);
+  timeline.push(consent);
   timeline.push(activeFullscreen,
                 Quit_expe);
 
@@ -1321,11 +1321,11 @@ switch(stereo_type) {
 
       /* Send data to Firebase */
       database
-        .ref("Attractiveness_stereo/" + jspsych_id + "/")
+        .ref("Attractiveness_stereo_Ahmet/" + jspsych_id + "/")
         .update({ datarating })
         .then(function () {
       database
-        .ref("Attractiveness_stereo/" + jspsych_id + "/")
+        .ref("Attractiveness_stereo_Ahmet/" + jspsych_id + "/")
         .update({ dataattractiveness })
         .then(function () {
               console.log("Data sent!");
