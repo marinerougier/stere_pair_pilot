@@ -1317,21 +1317,15 @@ switch(stereo_type) {
       });
 
       var datarating = data.filter({ task: 'rating' }).csv();
-      var dataattractiveness = data.filter({ task: 'attractiveness' }).csv();
 
       /* Send data to Firebase */
       database
         .ref("Attractiveness_stereo_Ahmet/" + jspsych_id + "/")
         .update({ datarating })
         .then(function () {
-      database
-        .ref("Attractiveness_stereo_Ahmet/" + jspsych_id + "/")
-        .update({ dataattractiveness })
-        .then(function () {
               console.log("Data sent!");
               $("#jspsych-content").html(debrief);
               //setTimeout(jsPsych.data.displayData, 5000);
-              });
         });
     }
   });
